@@ -1,6 +1,6 @@
 # Grape::Erb
 
-Use [Erb](https://github.com/mimosa/erb) templates in [Grape](https://github.com/intridea/grape)!
+Use [Erb](https://github.com/mimosa/grape-erb) templates in [Grape](https://github.com/intridea/grape)!
 
 ## Installation
 
@@ -66,19 +66,6 @@ You can override the default layout conventions:
 use Rack::Config do |env|
   env['api.tilt.root'] = '/path/to/view/root/directory'
   env['api.tilt.layout'] = 'layouts/another'
-end
-```
-
-### Enable template caching
-
-Grape-erb allows for template caching after templates are loaded initially.
-
-You can enable template caching:
-
-```ruby
-# config.ru
-Grape::Erb.configure do |c|
-  c.cache_template_loading = true # default: false
 end
 ```
 

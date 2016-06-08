@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+require 'tilt'
 
 module Grape
   module Erb
